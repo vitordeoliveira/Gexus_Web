@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 // Atoms
-import Button from "../atoms/Button";
+import Button from "../atoms/ButtonApresentaion";
 
 function Information() {
   return (

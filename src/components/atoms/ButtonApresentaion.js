@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-function Button({ text, ...props }) {
+function ButtonApresentaion({ text, ...props }) {
   return (
     <Wrapper>
       <Text>{text}</Text>
@@ -10,7 +10,6 @@ function Button({ text, ...props }) {
 }
 
 const Wrapper = styled.div`
-  border: 1px solid red;
   background: red;
   height: 55px;
   display: flex;
@@ -20,6 +19,21 @@ const Wrapper = styled.div`
   cursor: pointer;
   min-width: 370px;
   margin-right: 15px;
+  border-radius: 50px;
+
+  :hover {
+    animation: push 0.3s infinite alternate linear;
+  }
+
+  @keyframes push {
+    0% {
+      height: 55px;
+    }
+    100% {
+      height: 60px;
+      width: 92%;
+    }
+  }
 
   @media (max-width: 500px) {
     width: 90%;
@@ -41,4 +55,4 @@ const Text = styled.h2`
   }
 `;
 
-export default Button;
+export default ButtonApresentaion;
