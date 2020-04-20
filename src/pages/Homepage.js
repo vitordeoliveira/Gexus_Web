@@ -14,8 +14,11 @@ import DifferentialText from "../components/atoms/DifferentialText";
 // Molecules
 import Information from "../components/molecules/Information";
 import NavLinks from "../components/molecules/NavLinks";
+import Contact from "../components/molecules/Contact";
+
 // Organisms
 import Services from "../components/organisms/Services";
+import LeadsForm from "../components/organisms/LeadsForm";
 
 function Homepage() {
   return (
@@ -62,7 +65,20 @@ function Homepage() {
         </DifferentialText>
       </Differentials>
 
-      <LeadsHome></LeadsHome>
+      <LeadsHome
+        title={
+          <SessionsTitle text="VAMOS TIRAR SUA IDEIA DO PAPEL?"></SessionsTitle>
+        }
+        contact={
+          <Contact
+            phone="+55 41 9 88099996"
+            email="contato@gexus.com.br"
+            text="Segunda a sexta
+        das 7h30 às 18h"
+          ></Contact>
+        }
+        lead={<LeadsForm></LeadsForm>}
+      ></LeadsHome>
     </>
   );
 }

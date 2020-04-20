@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 function ButtonApresentaion({ text, ...props }) {
   return (
-    <Wrapper>
+    <Wrapper {...props}>
       <Text>{text}</Text>
     </Wrapper>
   );
@@ -15,14 +15,17 @@ const Wrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 90%;
+  width: ${(props) => (props.width ? props.width : "90%")};
   cursor: pointer;
   min-width: 370px;
   margin-right: 15px;
   border-radius: 50px;
 
   :hover {
-    animation: push 0.3s infinite alternate linear;
+    ${(props) =>
+      props.animation
+        ? "animation: push 0.3s infinite alternate linear;"
+        : null}
   }
 
   @keyframes push {

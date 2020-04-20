@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 // Atoms
-import Button from "../atoms/ButtonApresentaion";
+import Button from "../atoms/ButtonApresentation";
 
 function Information() {
   return (
@@ -11,7 +11,7 @@ function Information() {
       <Paragraph>
         Somos uma empresa de marketing e desenvolvedores especializados.
       </Paragraph>
-      <Button text="Quero falar com um especialista"></Button>
+      <Button text="Quero falar com um especialista" animation></Button>
     </Wrapper>
   );
 }
